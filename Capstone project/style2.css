@@ -1,0 +1,449 @@
+/* -------------------------------------------------------------------------- */
+/* 1. BASIC SETUP & VARIABLES                                               */
+/* -------------------------------------------------------------------------- */
+
+:root {
+    --primary-color: #DD2C00; /* Rich Red/Orange */
+    --secondary-color: #333;
+    --background-dark: #1f1f1f; 
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Roboto', sans-serif;
+}
+
+/* MANDATORY FIX: This enables smooth scrolling when clicking on anchor links */
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box; 
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--secondary-color);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-heading);
+}
+
+.btn-order, .btn-learn {
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+main > section {
+    padding: 50px 5%;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/* 2. HEADER - FLEXBOX                                                      */
+/* -------------------------------------------------------------------------- */
+
+.main-header {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 15px 5%;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex; 
+    gap: 25px; 
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    transition: color 0.3s;
+}
+
+.main-nav a:hover {
+    color: var(--primary-color); 
+}
+
+.btn-order {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-order:hover {
+    background-color: #ff5722; 
+}
+
+
+/* -------------------------------------------------------------------------- */
+/* 3. HERO SECTION & ABOUT US                                               */
+/* -------------------------------------------------------------------------- */
+
+.hero-banner {
+    min-height: 450px; 
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                      url(foodiamge.jpg); 
+    background-size: cover; 
+    background-position: center center; 
+    display: flex; 
+    justify-content: flex-start; 
+    align-items: center; 
+    padding: 0 5%; 
+    color: white; 
+}
+
+.hero-content {
+    max-width: 500px; 
+    padding: 20px 0;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 10px;
+}
+
+.about-us-section {
+    background-color: #f8f8f8;
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto;
+    border-radius: 8px;
+    padding: 40px;
+}
+
+.about-us-section h2 {
+    margin-bottom: 20px;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/* 4. MENU CATEGORY FILTERS - FLEXBOX                                       */
+/* -------------------------------------------------------------------------- */
+
+.category-filters {
+    padding: 30px 5% 10px;
+    text-align: center;
+}
+
+.category-filters h2 {
+    margin-bottom: 15px;
+}
+
+.categories-nav {
+    display: flex; 
+    justify-content: center;
+    flex-wrap: wrap; 
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.category-link {
+    text-decoration: none;
+    color: var(--secondary-color);
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.category-link:hover, .category-link.active {
+    background-color: var(--primary-color); 
+    color: white;
+    border-color: var(--primary-color);
+}
+
+
+/* -------------------------------------------------------------------------- */
+/* 5. DISH GRID - HORIZONTAL SCROLLING (FLEXBOX)                            */
+/* -------------------------------------------------------------------------- */
+
+.signature-dishes {
+    text-align: center;
+    /* Ensure no vertical padding conflict with the scrolling area */
+    padding-top: 50px; 
+    padding-bottom: 50px;
+}
+
+.signature-dishes h2 {
+    margin-bottom: 40px;
+}
+
+.dish-grid {
+    /* *** KEY FOR HORIZONTAL SCROLLING *** */
+    display: flex; /* Flexbox for horizontal alignment */
+    overflow-x: auto; /* Enable horizontal scrolling on small screens */
+    gap: 30px; 
+    padding: 20px 5%; /* Add padding inside the scrolling area */
+    justify-content: flex-start; /* Items align to the start */
+    
+    /* Hide scrollbar for aesthetics (optional) */
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+.dish-grid::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+.dish-card {
+    /* *** KEY FOR HORIZONTAL SCROLLING *** */
+    flex: 0 0 280px; /* Do not grow, do not shrink, set fixed width */
+    
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s; 
+    text-align: left; /* Text alignment within the card */
+}
+
+.dish-card:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.dish-image {
+    width: 100%;
+    height: 180px; /* Slightly taller image area */
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 15px;
+    border-radius: 4px;
+}
+
+.dish-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.dish-card .price {
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 8px;
+}
+
+.dish-card .description {
+    font-size: 0.9rem;
+    color: #777;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/* 6. FEATURED DEAL & REVIEWS - HORIZONTAL SCROLLING (FLEXBOX)              */
+/* -------------------------------------------------------------------------- */
+
+.featured-deal {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                      url(deal2.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 60px 5%;
+    color: white;
+    text-align: center;
+}
+
+.featured-deal h3 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+/* Review Section */
+.reviews-section {
+    text-align: center;
+}
+
+.review-grid {
+    /* *** KEY FOR HORIZONTAL SCROLLING *** */
+    display: flex; 
+    overflow-x: auto; 
+    gap: 30px;
+    padding: 20px 5%; /* Add padding inside the scrolling area */
+    justify-content: flex-start;
+    
+    /* Hide scrollbar */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.review-grid::-webkit-scrollbar {
+    display: none;
+}
+
+.review-card {
+    /* *** KEY FOR HORIZONTAL SCROLLING *** */
+    flex: 0 0 350px; /* Fixed width for consistent scroll behavior */
+    
+    background-color: #f9f9f9;
+    padding: 25px;
+    border-radius: 8px;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.reviewer-header-flex {
+    display: flex; /* FLEXBOX for aligning image, name, and rating */
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.reviewer-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--primary-color);
+}
+
+.reviewer-name {
+    font-weight: bold;
+    flex-grow: 1; /* Pushes the rating to the end */
+}
+
+.reviewer-rating {
+    color: gold;
+    font-size: 1.1rem;
+}
+
+.review-text {
+    font-style: italic;
+    margin-bottom: 0;
+    color: #555;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/* 8. CONTACT FORM & FOOTER                                                 */
+/* -------------------------------------------------------------------------- */
+
+.contact-section {
+    text-align: center;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 30px auto 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+/* Footer (CSS Grid) */
+.main-footer {
+    background-color: var(--background-dark); 
+    color: #ccc;
+    padding: 40px 5%;
+}
+
+.footer-grid-container {
+    display: grid; /* CSS GRID */
+    grid-template-columns: 1fr 0.8fr 1.5fr; 
+    gap: 40px; 
+    padding-bottom: 30px;
+    border-bottom: 1px solid #444;
+}
+
+.main-footer h3 {
+    color: white;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.main-footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.main-footer a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.main-footer a:hover {
+    color: var(--primary-color); 
+}
+
+.copyright-bar {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 0.8rem;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/* 10. RESPONSIVE DESIGN - MEDIA QUERIES (GRID FALLBACKS)                   */
+/* -------------------------------------------------------------------------- */
+
+/* Tablet View (Max-width 992px) */
+@media (max-width: 992px) {
+    .main-nav {
+        display: none; 
+    }
+    
+    /* Footer falls back to two columns */
+    .footer-grid-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* Mobile View (Max-width 576px) */
+@media (max-width: 576px) {
+    /* Header Stacking */
+    .main-header {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    /* Hero Center Alignment */
+    .hero-banner {
+        min-height: 350px;
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .hero-content {
+        text-align: center;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    /* Footer falls back to single column */
+    .footer-grid-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}

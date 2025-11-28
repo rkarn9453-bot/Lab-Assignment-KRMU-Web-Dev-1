@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Delivery App - Capstone Project</title>
+    <!-- Custom Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+
+    <!-- 1. HEADER & NAVIGATION (FLEXBOX) -->
+    <header class="main-header">
+        <div class="logo">FOOD <span style="color: var(--primary-color);">APP</span></div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#menu">MENU</a></li>
+                <li><a href="#about-us">ABOUT US</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </nav>
+        <a href="#menu" class="btn-order">ORDER ONLINE</a>
+    </header>
+
+    <!-- HERO SECTION (FLEXBOX) -->
+    <section class="hero-banner" id="home">
+        <div class="hero-content">
+            <h1>Order the Finest</h1>
+            <h2>Takeaway Food to your Door</h2>
+            <p>You can even order for late-night delivery or catering events.</p>
+            <a href="#menu" class="btn-learn">VIEW MENU</a>
+        </div>
+    </section>
+
+    <main>
+        <!-- ABOUT US SECTION -->
+        <section class="about-us-section" id="about-us">
+            <h2>Our Story: Authentic Indian Flavors</h2>
+            <p>We are dedicated to bringing the most authentic and fresh food right to your doorstep. Our chefs use traditional recipes and the finest local ingredients to ensure every bite is a delightful experience. We prioritize speed, quality, and your satisfaction!</p>
+            <p>From quick meals to family feasts, we deliver taste and convenience across the city.</p>
+        </section>
+
+        <!-- MENU CATEGORY FILTERS (FLEXBOX) -->
+        <section class="category-filters">
+            <h2>Explore Categories</h2>
+            <nav class="categories-nav">
+                <a href="#menu" class="category-link active">All Dishes</a>
+                <a href="#menu" class="category-link">Tandoori</a>
+                <a href="#menu" class="category-link">Curries</a>
+                <a href="#menu" class="category-link">Vegetarian</a>
+                <a href="#menu" class="category-link">Rice & Bread</a>
+                <a href="#menu" class="category-link">Desserts</a>
+            </nav>
+        </section>
+
+        <!-- 2. SIGNATURE DISHES (HORIZONTAL SCROLLING MENU - FLEXBOX) -->
+        <section class="signature-dishes" id="menu">
+            <h2>AUTHENTIC INDIAN FOOD MENU</h2>
+            <div class="dish-grid">
+                <!-- Dish Card 1: Chicken Tikka Masala -->
+                <article class="dish-card">
+                    <div class="dish-image" style="background-image: url(chicken-tikka.jpg);"></div>
+                    <h3>Chicken Tikka Masala</h3>
+                    <p class="price">380 INR</p>
+                    <p class="description">Creamy, classic dish with marinated chicken. **(Curry)**</p>
+                </article>
+                
+                <!-- Dish Card 2: Tandoori Butter Naan -->
+                <article class="dish-card">
+                    <div class="dish-image" style="background-image: url(naan.jpg);"></div>
+                    <h3>Tandoori Butter Naan</h3>
+                    <p class="price">80 INR</p>
+                    <p class="description">Freshly baked bread, perfect for dipping. **(Bread & Rice)**</p>
+                </article>
+
+                <!-- Dish Card 3: Palak Paneer -->
+                <article class="dish-card">
+                    <div class="dish-image" style="background-image: url(palakpaneer.jpg);"></div>
+                    <h3>Palak Paneer</h3>
+                    <p class="price">320 INR</p>
+                    <p class="description">Spinach and cottage cheese in a rich curry. **(Vegetarian)**</p>
+                </article>
+                
+                <!-- Dish Card 4: Mutton Biryani -->
+                <article class="dish-card">
+                    <div class="dish-image" style="background-image: url(biryani.jpg);"></div>
+                    <h3>Mutton Biryani</h3>
+                    <p class="price">450 INR</p>
+                    <p class="description">Aromatic rice layered with spiced mutton. **(Rice)**</p>
+                </article>
+
+                <!-- Dish Card 5: Garlic Naan -->
+                <article class="dish-card">
+                    <div class="dish-image" style="background-image: url(naan.jpg);"></div>
+                    <h3>Garlic Naan</h3>
+                    <p class="price">90 INR</p>
+                    <p class="description">Naan bread infused with fresh garlic. **(Bread & Rice)**</p>
+                </article>
+                
+                <!-- Dish Card 6: Vegetable Korma -->
+                <article class="dish-card">
+                    <div class="dish-image" style="background-image: url(korma.jpg);"></div>
+                    <h3>Vegetable Korma</h3>
+                    <p class="price">300 INR</p>
+                    <p class="description">Mixed vegetables in a rich cashew sauce. **(Vegetarian)**</p>
+                </article>
+                
+                <!-- Dish Card 7: Prawn Curry -->
+                <article class="dish-card">
+                    <div class="dish-image" style="background-image: url(curry.jpg);"></div>
+                    <h3>Goan Prawn Curry</h3>
+                    <p class="price">480 INR</p>
+                    <p class="description">Spicy coastal curry with large prawns. **(Curry)**</p>
+                </article>
+                
+                <!-- Dish Card 8: Tandoori Chicken Half -->
+                <article class="dish-card">
+                    <div class="dish-image" style="background-image: url(tandoori.jpg);"></div>
+                    <h3>Tandoori Chicken (Half)</h3>
+                    <p class="price">390 INR</p>
+                    <p class="description">Marinated chicken grilled in a clay oven. **(Tandoori)**</p>
+                </article>
+
+                <!-- Dish Card 9: Jeera Rice -->
+                <article class="dish-card">
+                    <div class="dish-image" style="background-image: url(jeera.jpg);"></div>
+                    <h3>Jeera Rice</h3>
+                    <p class="price">150 INR</p>
+                    <p class="description">Basmati rice sautéed with cumin seeds. **(Rice)**</p>
+                </article>
+                
+                <!-- Dish Card 10: Samosa (2 pcs) -->
+                <article class="dish-card">
+                    <div class="dish-image" style="background-image: url(samosa.jpg);"></div>
+                    <h3>Vegetable Samosa (2 Pcs)</h3>
+                    <p class="price">120 INR</p>
+                    <p class="description">Crispy pastry filled with spiced potatoes. **(Vegetarian)**</p>
+                </article>
+                
+                <!-- Dish Card 11: Gulab Jamun -->
+                <article class="dish-card">
+                    <div class="dish-image" style="background-image: url(gulab.jpg);"></div>
+                    <h3>Gulab Jamun (3 Pcs)</h3>
+                    <p class="price">180 INR</p>
+                    <p class="description">Soft milk solids soaked in sweet syrup. **(Dessert)**</p>
+                </article>
+            
+            </div>
+        </section>
+        
+        <!-- FEATURED DEAL ITEM -->
+        <section class="featured-deal">
+            <div class="deal-content">
+                <h3>🍽️ Today's Special Deal!</h3>
+                <h4>The Family Feast Bundle - Save 25%</h4>
+                <p>Includes Chicken Tikka Masala, Palak Paneer, 4 Butter Naans, and Mutton Biryani.</p>
+                <a href="#menu" class="btn-learn">Order Deal Now</a>
+            </div>
+        </section>
+
+        <!-- CUSTOMER REVIEWS (HORIZONTAL SCROLLING REVIEWS - FLEXBOX) -->
+        <section class="reviews-section">
+            <h2>What Our Customers Say</h2>
+            <div class="review-grid">
+                <!-- Review Card 1 (7+ total) -->
+                <article class="review-card">
+                    <div class="reviewer-header-flex">
+                        <img src="https://placehold.co/60x60/808080/FFFFFF/png?text=A.K" alt="Customer Avatar" class="reviewer-avatar">
+                        <span class="reviewer-name">Anil K.</span>
+                        <span class="reviewer-rating">⭐⭐⭐⭐⭐</span>
+                    </div>
+                    <p class="review-text">"The delivery was incredibly fast and the food was hot! I highly recommend the Chicken Tikka Masala. Best in the city!"</p>
+                </article>
+                
+                <!-- Review Card 2 -->
+                <article class="review-card">
+                    <div class="reviewer-header-flex">
+                        <img src="https://placehold.co/60x60/5cb85c/FFFFFF/png?text=P.S" alt="Customer Avatar" class="reviewer-avatar">
+                        <span class="reviewer-name">Priya S.</span>
+                        <span class="reviewer-rating">⭐⭐⭐⭐</span>
+                    </div>
+                    <p class="review-text">"The Palak Paneer was fresh and authentic. Great website design and so easy to use for ordering online."</p>
+                </article>
+                
+                <!-- Review Card 3 -->
+                <article class="review-card">
+                    <div class="reviewer-header-flex">
+                        <img src="https://placehold.co/60x60/f0ad4e/FFFFFF/png?text=R.M" alt="Customer Avatar" class="reviewer-avatar">
+                        <span class="reviewer-name">Rohan M.</span>
+                        <span class="reviewer-rating">⭐⭐⭐⭐⭐</span>
+                    </div>
+                    <p class="review-text">"Best Biryani I've had in a long time! Excellent service and quality ingredients."</p>
+                </article>
+
+                <!-- Review Card 4 -->
+                <article class="review-card">
+                    <div class="reviewer-header-flex">
+                        <img src="https://placehold.co/60x60/d9534f/FFFFFF/png?text=S.L" alt="Customer Avatar" class="reviewer-avatar">
+                        <span class="reviewer-name">Sana L.</span>
+                        <span class="reviewer-rating">⭐⭐⭐⭐</span>
+                    </div>
+                    <p class="review-text">"Vegetable Korma was amazing! They have great options for vegetarians, which is hard to find with delivery."</p>
+                </article>
+
+                <!-- Review Card 5 -->
+                <article class="review-card">
+                    <div class="reviewer-header-flex">
+                        <img src="https://placehold.co/60x60/0275d8/FFFFFF/png?text=V.D" alt="Customer Avatar" class="reviewer-avatar">
+                        <span class="reviewer-name">Vivek D.</span>
+                        <span class="reviewer-rating">⭐⭐⭐⭐⭐</span>
+                    </div>
+                    <p class="review-text">"I ordered the Family Feast Bundle for a party and it was a huge hit! Everything was perfectly spiced."</p>
+                </article>
+                
+                <!-- Review Card 6 -->
+                <article class="review-card">
+                    <div class="reviewer-header-flex">
+                        <img src="https://placehold.co/60x60/5bc0de/FFFFFF/png?text=J.P" alt="Customer Avatar" class="reviewer-avatar">
+                        <span class="reviewer-name">Jaya P.</span>
+                        <span class="reviewer-rating">⭐⭐⭐⭐</span>
+                    </div>
+                    <p class="review-text">"Good value and very quick delivery time. The Garlic Naan was incredible and still warm."</p>
+                </article>
+                
+                <!-- Review Card 7 -->
+                <article class="review-card">
+                    <div class="reviewer-header-flex">
+                        <img src="https://placehold.co/60x60/f0ad4e/FFFFFF/png?text=K.S" alt="Customer Avatar" class="reviewer-avatar">
+                        <span class="reviewer-name">Karan S.</span>
+                        <span class="reviewer-rating">⭐⭐⭐⭐⭐</span>
+                    </div>
+                    <p class="review-text">"Fantastic Mango Lassi! A perfect, refreshing end to a great meal. Will definitely order again next weekend."</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- 3. CONTACT FORM (Form Requirement) -->
+        <section class="contact-section" id="contact">
+            <h2>Send Us a Message</h2>
+            <form class="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit" class="btn-order">Send Inquiry</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- 4. FOOTER (CSS GRID) -->
+    <footer class="main-footer">
+        <div class="footer-grid-container">
+            <div class="footer-contact">
+                <h3>Contact Info</h3>
+                <ul>
+                    <li>📞 880-123-4567</li>
+                    <li>📧 info@foodapp.com</li>
+                    <li>📍 123 Food Street, City</li>
+                </ul>
+            </div>
+            <nav class="footer-nav-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#about-us">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                </ul>
+            </nav>
+            <div class="footer-logo-description">
+                <div class="logo">FOOD</div>
+                <p>A fully structured and responsive web interface for a real-world food delivery application.</p>
+            </div>
+        </div>
+        <div class="copyright-bar">
+            <p class="copyright">&copy; 2025 Food Delivery App. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
