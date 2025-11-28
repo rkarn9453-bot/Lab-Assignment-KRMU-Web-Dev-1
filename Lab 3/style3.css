@@ -1,0 +1,220 @@
+/* ---------- GLOBAL ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #f4f6ff;
+    scroll-behavior: smooth;
+    color: #222;
+}
+
+/* ---------- NAVBAR ---------- */
+.nav {
+    background: #121c4d;
+    color: white;
+    padding: 18px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #d8d9ff;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav nav a:hover {
+    color: #ffffff;
+}
+
+/* ---------- HERO ---------- */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    padding: 80px 50px;
+    background: linear-gradient(135deg, #563dff, #8f30ff);
+    color: white;
+    flex-wrap: wrap;
+}
+
+.hero-text {
+    max-width: 600px;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.typing {
+    font-size: 32px;
+    background: linear-gradient(90deg, #00f2ff, #ff3dfc);
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: colorChange 4s infinite alternate;
+}
+
+@keyframes colorChange {
+    0% { filter: hue-rotate(0deg); }
+    100% { filter: hue-rotate(360deg); }
+}
+
+.hero-text p {
+    margin: 10px 0;
+    font-size: 16px;
+    width: 80%;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 25px;
+    background: #fff;
+    color: #563dff;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #e8e8ff;
+}
+
+.hero-img img {
+    width: 320px;
+    border-radius: 50%;
+    object-fit: cover;
+    filter: drop-shadow(0px 5px 15px rgba(0,0,0,0.3));
+}
+
+/* ---------- SECTION TITLE ---------- */
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* ---------- ABOUT ---------- */
+.about {
+    width: 80%;
+    margin: 40px auto;
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* ---------- SKILLS GRID ---------- */
+.skills-grid {
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+.skill-card {
+    padding: 20px;
+    background: white;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0px 5px 18px rgba(0,0,0,0.12);
+    transition: 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-6px);
+}
+
+/* ---------- PROJECTS GRID ---------- */
+.project-grid {
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 25px;
+}
+
+.project-card {
+    background: white;
+    padding: 20px;
+    border-left: 6px solid #563dff;
+    border-radius: 12px;
+    box-shadow: 0px 5px 18px rgba(0,0,0,0.12);
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+}
+
+/* ---------- CONTACT FORM ---------- */
+.contact-form {
+    width: 350px;
+    margin: auto;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0px 5px 18px rgba(0,0,0,0.15);
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 6px;
+    border: 1px solid #bbb;
+}
+
+.contact-form button {
+    width: 100%;
+    margin-top: 15px;
+}
+
+/* ---------- ANIMATIONS ---------- */
+.fade-in {
+    animation: fade 1.2s ease;
+}
+
+@keyframes fade {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.slide-in {
+    animation: slide 1.2s ease;
+}
+
+@keyframes slide {
+    from { opacity: 0; transform: translateX(40px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+/* ---------- FOOTER ---------- */
+.footer {
+    background: #121c4d;
+    padding: 15px;
+    color: white;
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+    .hero {
+        text-align: center;
+        justify-content: center;
+    }
+
+    .hero-img img {
+        margin-top: 30px;
+    }
+}
